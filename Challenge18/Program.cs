@@ -8,29 +8,48 @@ namespace FindMinMaxAvg
         {
             int[] numbers = {2, 4, 54, 12, -65, 19, 40, 92, 88, 330, -4, 54};
 
-            FindMax(numbers); // Output: 330
-            FindMin(numbers); // Output: -65
-            FindAverage(numbers); // Output: 52.16
+            Console.WriteLine(FindMax(numbers)); // Output: 330
+            Console.WriteLine(FindMin(numbers)); // Output: -65
+            Console.WriteLine(FindAverage(numbers)); // Output: 52.16
         }
 
         static int FindMax(int[] numbers)
         {
             int ln = numbers.Length;
-            int mac = 0;
+            int max = 0;
+			int temp = 0;
             for(int i=0; i<ln; i++){
-                
+                temp = numbers[i];
+				if(temp > max){
+					max = temp;
+				}
             }
-            return 0;
+			
+            return max;
         }
 
         static int FindMin(int[] numbers)
         {
-            return 0;
+			int ln = numbers.Length;
+            int min = 0;
+			int temp = 0;
+            for(int i=0; i<ln; i++){
+                temp = numbers[i];
+				if(temp < min){
+					min = temp;
+				}
+            }
+            return min;
         }
 
-        static int FindAverage(int[] numbers)
+        static double FindAverage(int[] numbers)
         {
-            return 0;
+			int ln = numbers.Length;
+			double avg = 0;
+			foreach(int i in numbers)
+				avg += i;
+			
+			return avg/ln;
         }
     }
 }

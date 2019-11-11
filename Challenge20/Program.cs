@@ -2,6 +2,21 @@ using System;
 
 namespace ObjectClass
 {
+
+    public class Item{
+        
+		public String name;
+		public double price;
+		public bool onSale;
+		
+		public void print(){
+			if(onSale)
+				price = price - price * 0.2;
+			
+			Console.Write("{0} ({1})", name, price);
+		}
+	}
+
     class Program
     {
         static void Main(string[] args)
