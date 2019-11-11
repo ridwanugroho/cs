@@ -15,6 +15,11 @@ namespace FindMinMaxAvg
 
         static int FindMax(int[] numbers)
         {
+            int ln = numbers.Length;
+            int mac = 0;
+            for(int i=0; i<ln; i++){
+                
+            }
             return 0;
         }
 

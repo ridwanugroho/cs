@@ -17,14 +17,20 @@ namespace FruitFinder
             };
 
             // Find the index of a fruit
-            IndexFinder(fruits, "Jeruk"); // Output: 0
-            IndexFinder(fruits, "Pepaya"); // Output: 3
-            IndexFinder(fruits, "Markisa"); // Output: 6
+            Console.WriteLine(IndexFinder(fruits, "Jeruk")); // Output: 0
+            Console.WriteLine(IndexFinder(fruits, "Pepaya")); // Output: 3
+            Console.WriteLine(IndexFinder(fruits, "Markisa")); // Output: 6
         }
 
         static int IndexFinder(string[] list, string value)
         {
-            return 0;
+            int ln = list.Length;
+            for(int i=0; i<ln; i++){
+                if(list[i] == value)
+                    return i;
+            }
+
+            return 99;
         }
     }
 }

@@ -6,12 +6,16 @@ namespace MirrorString
     {
         static void Main(string[] args)
         {
-            Mirror("--vv"); // Output: --vvvv--
+            Console.WriteLine(Mirror("--vv")); // Output: --vvvv--
         }
 
         static string Mirror(string text)
         {
-            return "";
+            int ln = text.Length;
+            for(int i=0; i<ln; i++)
+                text += text[ln-i-1];
+
+            return text;
         }
     }
 }
