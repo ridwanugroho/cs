@@ -5,6 +5,7 @@ namespace Substitution
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             // We have some word collection ...
@@ -19,6 +20,16 @@ namespace Substitution
             // Censor the words in paragraph by using * symbol.
             // Output example:
             // Lorem ipsum ***** sit amet, ********* vituperata *** in, nonumy.
+
+            foreach(string wrd in censoredWords){
+                string censorer = "";
+                for(int i=0; i<wrd.Length; i++)
+                    censorer += '*';
+
+                paragraph = paragraph.Replace(wrd, censorer);
+            }
+
+            Console.Write(paragraph);
         }
     }
 }

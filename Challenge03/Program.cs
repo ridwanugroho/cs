@@ -4,6 +4,7 @@ namespace StringLength
 {
     class Program
     {
+        
         private static int CountString(string args){
             return args.Length;
         }
