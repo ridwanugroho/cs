@@ -4,6 +4,10 @@ namespace StringLength
 {
     class Program
     {
+        private static int CountString(string args){
+            return args.Length;
+        }
+
         static void Main(string[] args)
         {
             // Create new method called "CountString".
@@ -13,5 +17,6 @@ namespace StringLength
             Console.WriteLine("'Hello World!' have {0} characters", CountString("Hello World!"));
             Console.WriteLine("'Hello Universe!' have {0} characters", CountString("Hello Universe!"));
         }
+
     }
 }
