@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace StringLength
+namespace Challenge
 {
-    class Program
+    public class StrLength
     {
         
-        private static int CountString(string args){
+        private static int countString(string args){
             return args.Length;
         }
 
