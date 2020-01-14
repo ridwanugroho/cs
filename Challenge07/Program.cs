@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TempratureConverter
+namespace Challenge
 {
-    class Program
+    public class Temperature
     {
         static void Main(string[] args)
         {
@@ -16,32 +16,32 @@ namespace TempratureConverter
 
         }
 
-        private static double CelciusToFahrenheit(double value)
+        public static double CelciusToFahrenheit(double value)
         {
             return Math.Round((value * 9/5) + 32, 2);
         }
 
-        private static double FahrenheitToCelcius(double value)
+        public static double FahrenheitToCelcius(double value)
         {
             return Math.Round((value - 32) * 5/9, 2);
         }
 
-        private static double CelciusToKelvin(double value)
+        public static double CelciusToKelvin(double value)
         {
             return Math.Round(value + 273.15, 2);
         }
 
-        private static double KelvinToCelcius(double value)
+        public static double KelvinToCelcius(double value)
         {
             return Math.Round(value - 273.15, 2);
         }
 
-        private static double KelvinToFahrenheit(double value)
+        public static double KelvinToFahrenheit(double value)
         {
             return Math.Round((value - 273.15) * 9/5 + 32, 2);
         }
 
-        private static double FahrenheitToKelvin(double value)
+        public static double FahrenheitToKelvin(double value)
         {
             return Math.Round((value - 32) * 5/9 + 273.15, 3);
         }

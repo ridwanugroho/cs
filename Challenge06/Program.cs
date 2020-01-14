@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Grade
+namespace Challenge
 {
-    class Program
+    public class Grade
     {
 
-        static private char Grade(int args){
+        static public char grading(int args){
             if(args >= 90)
                 return 'A';
             
@@ -38,7 +38,7 @@ namespace Grade
             // 5) If the input below 59 the output will be "E"
             Console.Write("Input numeric value : ");
             int inp = int.Parse(Console.ReadLine());
-            Console.WriteLine("Grade is : " + Grade(inp));
+            Console.WriteLine("Grade is : " + grading(inp));
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace EvenOdd
+namespace Challenge
 {
-    class Program
+    public class EvenOdd
     {
         
-        static private bool isOdd(int args){
+        static public bool isOdd(int args){
             if(args%2 == 1)
                 return true;
 
@@ -13,7 +13,7 @@ namespace EvenOdd
         }
 
 
-        static private bool isEven(int args){
+        static public bool isEven(int args){
             if(args%2 == 0)
                 return true;
 

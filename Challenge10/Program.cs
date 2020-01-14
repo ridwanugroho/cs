@@ -1,26 +1,26 @@
 ﻿using System;
 
-namespace Calculator
+namespace Challenge
 {
-    class Program
+    public class Calculator
     {
 
-        static private int Sum(int a, int b){
+        public static int Sum(int a, int b){
             return a + b;
         }
 
 
-        static private int Substract(int a, int b){
+        public static int Substract(int a, int b){
             return a - b;
         }
 
 
-        static private int Multiply(int a, int b){
+        public static int Multiply(int a, int b){
             return a * b;
         }
 
 
-        static private int Divide(int a, int b){
+        public static int Divide(int a, int b){
             return a / b;
         }
 

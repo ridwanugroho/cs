@@ -17,6 +17,13 @@
     <ProjectReference Include="..\Challenge01\YourName.csproj" />
     <ProjectReference Include="..\Challenge02\DaysToNextBirthday.csproj" />
     <ProjectReference Include="..\Challenge03\StringLength.csproj" />
+    <ProjectReference Include="..\Challenge04\Substitution.csproj" />
+    <ProjectReference Include="..\Challenge05\EvenOdd.csproj" />
+    <ProjectReference Include="..\Challenge06\Grade.csproj" />
+    <ProjectReference Include="..\Challenge07\TempratureConverter.csproj" />
+    <ProjectReference Include="..\Challenge08\LeapYear.csproj" />
+    <ProjectReference Include="..\Challenge09\Timezone.csproj" />
+    <ProjectReference Include="..\Challenge10\Calculator.csproj" />
   </ItemGroup>
 
 </Project>

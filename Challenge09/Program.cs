@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Timezone
+namespace Challenge
 {
-    class Program
+    public class Timezone
     {
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace Timezone
             Console.WriteLine(TimezoneDiff(denver, jakarta)); // Output: Denver 13 hours behind Jakarta
         }
 
-        static string TimezoneDiff(Tuple<string, int> a, Tuple<string, int> b)
+        public static string TimezoneDiff(Tuple<string, int> a, Tuple<string, int> b)
         {
             int ret = a.Item2 - b.Item2;
             if(ret > 0)

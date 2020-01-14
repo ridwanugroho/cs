@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace LeapYear
+namespace Challenge
 {
-    class Program
+    public class LeapYear
     {
 
-        static private bool IsLeapYear(int args){
+        public static bool isLeapYear(int args){
             return DateTime.IsLeapYear(args);
         }
 
@@ -16,7 +16,7 @@ namespace LeapYear
             // The output should be a boolean.
             Console.Write("insert year : ");
             int inp = int.Parse(Console.ReadLine());
-            Console.WriteLine(IsLeapYear(inp));
+            Console.WriteLine(isLeapYear(inp));
         }
     }
 }

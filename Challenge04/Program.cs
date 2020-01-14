@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 
-namespace Substitution
+namespace Challenge
 {
-    class Program
+    public class Subtitute
     {
         
         static void Main(string[] args)
@@ -14,22 +14,23 @@ namespace Substitution
             censoredWords.Add("dolor");
             censoredWords.Add("duo");
 
-            // and a paragraph.
             var paragraph = "Lorem ipsum dolor sit amet, imperdiet vituperata duo in, nonumy.";
+            paragraph = replace(paragraph, censoredWords);
 
-            // Censor the words in paragraph by using * symbol.
-            // Output example:
-            // Lorem ipsum ***** sit amet, ********* vituperata *** in, nonumy.
+            Console.Write(paragraph);
+        }
 
-            foreach(string wrd in censoredWords){
+        public static string replace(string str, ArrayList censor)
+        {
+            foreach(string wrd in censor){
                 string censorer = "";
                 for(int i=0; i<wrd.Length; i++)
                     censorer += '*';
 
-                paragraph = paragraph.Replace(wrd, censorer);
+                str = str.Replace(wrd, censorer);
             }
 
-            Console.Write(paragraph);
+            return str;
         }
     }
 }
