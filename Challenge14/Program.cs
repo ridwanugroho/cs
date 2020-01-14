@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace PalindromeDetector
+namespace Challenge
 {
-    class Program
+    public class PalindromeDetector
     {
         static void Main(string[] args)
         {
@@ -15,7 +15,7 @@ namespace PalindromeDetector
         }
 
 
-        static bool IsPalindrome(string text)
+        public static bool IsPalindrome(string text)
         {
             if(text.Length % 2 == 1){
                 int ln = text.Length/2;

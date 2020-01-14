@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace CountWords
+namespace Challenge
 {
-    class Program
+    public class CountWords
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(CountWords("Hello")); // Output: 1
-            Console.WriteLine(CountWords("Hello World")); // Output: 2
-            Console.WriteLine(CountWords("Lorem ipsum dolor sit amet")); // Output: 5
+            Console.WriteLine(countWords("Hello")); // Output: 1
+            Console.WriteLine(countWords("Hello World")); // Output: 2
+            Console.WriteLine(countWords("Lorem ipsum dolor sit amet")); // Output: 5
         }
 
-        static int CountWords(string value)
+        public static int countWords(string value)
         {
             // Make this method to be able counting words
 

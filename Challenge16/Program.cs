@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FruitFinder
+namespace Challenge
 {
-    class Program
+    public class FruitFinder
     {
         static void Main(string[] args)
         {
@@ -22,7 +22,7 @@ namespace FruitFinder
             Console.WriteLine(IndexFinder(fruits, "Markisa")); // Output: 6
         }
 
-        static int IndexFinder(string[] list, string value)
+        public static int IndexFinder(string[] list, string value)
         {
             int ln = list.Length;
             for(int i=0; i<ln; i++){

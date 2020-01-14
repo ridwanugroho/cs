@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ToUpperCase
+namespace Challenge
 {
-    class Program
+    public class Upper
     {
         static void Main(string[] args)
         {
@@ -13,5 +13,11 @@ namespace ToUpperCase
             
             Console.Write(args[0].ToUpper());
         }
+
+        public static string toUpper(string str)
+        {
+            return str.ToUpper();
+        }
+
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections;
 
-namespace FooBarBaz
+namespace Challenge
 {
-    class Program
+    public class FooBarBaz
     {
         static void Main(string[] args)
         {
@@ -12,24 +13,32 @@ namespace FooBarBaz
             // 1) When the number multiplied by 5, the output will change like so "5. Foo".
             // 2) When the number multiplied by 20, the output will change like so "40. Bar".
             // 3) When the number multiplied by 100, the output will change like so "300. Baz".
+            
+        }
+
+        public static ArrayList generator()
+        {
+            var ret = new ArrayList();
             for(int i=0; i<1000; i++){
                 if(i%5 == 0){
                     if(i%20 == 0){
                         if(i%100 == 0){
-                            Console.WriteLine("{0}. Baz", i);
+                            ret.Add("Baz");
                         }
 
                         else
-                            Console.WriteLine("{0}. Bar", i);
+                            ret.Add("Bar");
                     }
 
                     else
-                        Console.WriteLine("{0}. Foo", i);
+                        ret.Add("Foo");
                 }
 
                 else
-                    Console.WriteLine("{0}.", i);
+                    ret.Add(i);
             }
-        }
+
+            return ret;
+        }  
     }
 }

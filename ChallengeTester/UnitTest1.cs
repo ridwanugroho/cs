@@ -87,12 +87,106 @@ namespace ChallengeTester
         }
 
         [Fact]
-        public void TestName()
+        public void tes_kalkulator()
         {
             Assert.Equal(15, Calculator.Sum(7, 8));
             Assert.Equal(7, Calculator.Substract(15, 8));
             Assert.Equal(100, Calculator.Multiply(25, 4));
             Assert.Equal(11, Calculator.Divide(22, 2));
+        }
+
+        [Fact]
+        public void tes_sum()
+        {
+            int[] raw = {1, 5, 8, 3};
+            Assert.Equal(17, SumArgs.sum(raw));
+        }
+    
+        [Fact]
+        public void tes_string_to_uppercase()
+        {
+            var expected = "AKU ADALAH SEORANG PELAUT";
+
+            Assert.Equal(expected, Upper.toUpper("aku Adalah seoRang pelauT"));
+        }
+    
+        [Fact]
+        public void tes_penghitung_jumlah_kata()
+        {
+            Assert.Equal(4, CountWords.countWords("aku adalah anak gebala"));
+            Assert.Equal(1, CountWords.countWords("aaaaassss"));
+        }
+    
+        [Fact]
+        public void tes_detektor_palindrome()
+        {
+            Assert.True(PalindromeDetector.IsPalindrome("akuka"));
+            Assert.False(PalindromeDetector.IsPalindrome("akukaa"));
+        }
+    
+        [Fact]
+        public void tes_mirror_string()
+        {
+            string expected = "---11100111---";
+            Assert.Equal(expected, MirrorString.Mirror("---1110"));
+        }
+
+        [Fact]
+        public void tes_index_finder()
+        {
+            string[] fruits = {
+                "Jeruk",
+                "Apel",
+                "Anggur",
+                "Pepaya",
+                "Pisang",
+                "Kiwi",
+                "Markisa",
+            };
+
+            Assert.Equal(0, FruitFinder.IndexFinder(fruits, "Jeruk"));
+            Assert.Equal(3, FruitFinder.IndexFinder(fruits, "Pepaya"));
+            Assert.Equal(6, FruitFinder.IndexFinder(fruits, "Markisa"));
+        }
+    
+        [Fact]
+        public void tes_foo_bar_buz()
+        {
+            var expected = new ArrayList();
+            for(int i=0; i<1000; i++){
+                if(i%5 == 0){
+                    if(i%20 == 0){
+                        if(i%100 == 0)
+                            expected.Add("Baz");
+
+                        else
+                            expected.Add("Bar");
+                    }
+
+                    else
+                        expected.Add("Foo");
+                }
+
+                else
+                    expected.Add(i);
+            }
+
+            Assert.Equal(expected, FooBarBaz.generator());
+        }
+    
+        [Fact]
+        public void tes_find_min_max_avg()
+        {
+            int[] numbers = {2, 4, 54, 12, -65, 19, 40, 92, 88, 330, -4, 54};
+            Assert.Equal(330, FindMinMaxAvg.FindMax(numbers));
+            Assert.Equal(-65, FindMinMaxAvg.FindMin(numbers));
+            Assert.Equal(52.17, FindMinMaxAvg.FindAverage(numbers));
+        }
+
+        [Fact]
+        public void TestName()
+        {
+            
         }
     }
 }

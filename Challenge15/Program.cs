@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace MirrorString
+namespace Challenge
 {
-    class Program
+    public class MirrorString
     {
         static void Main(string[] args)
         {
             Console.WriteLine(Mirror("--vv")); // Output: --vvvv--
         }
 
-        static string Mirror(string text)
+        public static string Mirror(string text)
         {
             int ln = text.Length;
             for(int i=0; i<ln; i++)
