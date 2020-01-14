@@ -1,33 +1,40 @@
 using System;
 
-namespace ObjectClass
+namespace Challenge
 {
 
-    public class Item{
-        
-		public String name;
-		public double price;
-		public bool onSale;
+    public class Item
+    {        
+		public static String name;
+		public static double price;
+		public static bool onSale;
 		
-		public void print(){
+		public static void print(){
 			if(onSale)
 				price = price - price * 0.2;
 			
 			Console.Write("{0} ({1})", name, price);
 		}
+
+        public static string testPrint(){
+            if(onSale)
+				price = price - price * 0.2;
+			
+			return $"{name} (Rp {price})";
+        }
 	}
 
-    class Program
+    public class ClassObject
     {
         static void Main(string[] args)
         {
             // Make this code works by create new class, method, and property.
-            Item item = new Item();
-            item.name = "Indomie Goreng";
-            item.price = 3500;
-            item.onSale = true; // If true the price will drop 20%
+            // Item item = new Item();
+            Item.name = "Indomie Goreng";
+            Item.price = 3500;
+            Item.onSale = true; // If true the price will drop 20%
 
-            item.print(); // Output: "Indomie Goreng (Rp2800)"
+            Item.print(); // Output: "Indomie Goreng (Rp2800)"
         }
     }
 }

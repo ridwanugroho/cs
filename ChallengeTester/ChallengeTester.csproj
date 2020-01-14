@@ -32,6 +32,8 @@
     <ProjectReference Include="..\Challenge16\FruitFinder.csproj" />
     <ProjectReference Include="..\Challenge17\FooBarBaz.csproj" />
     <ProjectReference Include="..\Challenge18\FindMinMaxAvg.csproj" />
+    <ProjectReference Include="..\Challenge19\Sorter.csproj" />
+    <ProjectReference Include="..\Challenge20\ObjectClass.csproj" />
   </ItemGroup>
 
 </Project>

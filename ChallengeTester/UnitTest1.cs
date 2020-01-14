@@ -61,7 +61,7 @@ namespace ChallengeTester
         {
             Assert.Equal(32, Temperature.CelciusToFahrenheit(0));
             Assert.Equal(10, Temperature.FahrenheitToCelcius(50));
-            Assert.Equal(375.15, Temperature.CelciusToKelvin(100));
+            Assert.Equal(373.15, Temperature.CelciusToKelvin(100));
             Assert.Equal(101.85, Temperature.KelvinToCelcius(375));
             Assert.Equal(215.33, Temperature.KelvinToFahrenheit(375));
             Assert.Equal(262.039, Temperature.FahrenheitToKelvin(12));
@@ -184,9 +184,23 @@ namespace ChallengeTester
         }
 
         [Fact]
-        public void TestName()
+        public void tes_sorting()
         {
-            
+            int[] expected = {-65, -4, 2, 4, 12, 19, 40, 54, 54, 88, 92, 330};
+            int[] raw = {2, 4, 54, 12, -65, 19, 40, 92, 88, 330, -4, 54};
+
+            Assert.Equal(expected, Sorter.sort(raw));
+        }
+    
+        [Fact]
+        public void tes_class_obj()
+        {
+            string expected = "Indomie Goreng (Rp 2800)";
+            Item.name = "Indomie Goreng";
+            Item.price = 3500;
+            Item.onSale = true;
+
+            Assert.Equal(expected, Item.testPrint());
         }
     }
 }
