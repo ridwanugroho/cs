@@ -5,7 +5,7 @@ namespace Challenge
     public class StrLength
     {
         
-        private static int countString(string args){
+        public static int countString(string args){
             return args.Length;
         }
 

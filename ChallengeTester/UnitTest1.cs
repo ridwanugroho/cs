@@ -16,13 +16,13 @@ namespace ChallengeTester
         [Fact]
         public void tes_day_to_next_birthday()
         {
-            Assert.Equal(68, DaysToNextBirthday.test("2020/03/23"));
+            Assert.Equal(67, DaysToNextBirthday.test("2020/03/23"));
         }
 
         [Fact]
         public void tes_str_length()
         {
-            // Assert.Equal(3, StrLength.countString("aku"));
+            Assert.Equal(3, StrLength.countString("aku"));
         }
 
         [Fact]
